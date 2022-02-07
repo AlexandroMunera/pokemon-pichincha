@@ -1,0 +1,18 @@
+.searchBox {
+  border: 2px solid rgb(212, 210, 210);
+  background-color: white;
+  display: flex;
+  gap: .3rem;
+  flex-wrap: nowrap;
+  padding: 0 .5rem;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+}
+
+.iconSearch {
+  width: 0.7rem;
+  fill: grey;
+}

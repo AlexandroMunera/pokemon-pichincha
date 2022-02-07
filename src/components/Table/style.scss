@@ -1,0 +1,32 @@
+.table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2px;
+  border: 2px solid rgb(212, 210, 210);
+  background-color: rgb(212, 210, 210);
+
+  & > div {
+    background-color: white;
+    padding: 0.5rem;
+  }
+
+  &__header {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .image {
+    text-align: center;
+  }
+
+  .icon {
+    width: 1rem;
+    fill: #6557fd;
+    cursor: pointer;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+}
