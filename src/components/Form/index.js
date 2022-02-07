@@ -3,7 +3,12 @@ import "./style.scss";
 import { ReactComponent as SaveIcon } from "../../images/saveIcon.svg";
 import { ReactComponent as CancelIcon } from "../../images/cancelIcon.svg";
 
-export const Form = ({ pokemonSelected, setPokemonSelected, setShowForm, save }) => {
+export const Form = ({
+  pokemonSelected,
+  setPokemonSelected,
+  setShowForm,
+  save,
+}) => {
   const handlerCancel = () => {
     setShowForm(false);
   };
@@ -14,8 +19,6 @@ export const Form = ({ pokemonSelected, setPokemonSelected, setShowForm, save })
       [event.target.name]: event.target.value,
     });
   };
-
-  
 
   return (
     <div className="container">
@@ -45,18 +48,22 @@ export const Form = ({ pokemonSelected, setPokemonSelected, setShowForm, save })
           <div className="input">
             <span>Ataque:</span>
             <input
+              type="range"
+              min="1"
+              max="100"
               onChange={handlerChange}
               name="attack"
-              type="text"
               value={pokemonSelected && pokemonSelected.attack}
             />
           </div>
           <div className="input">
             <span>Defensa:</span>
             <input
+              type="range"
+              min="1"
+              max="100"
               onChange={handlerChange}
               name="defense"
-              type="text"
               value={pokemonSelected && pokemonSelected.defense}
             />
           </div>

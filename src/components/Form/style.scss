@@ -28,6 +28,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 4px;
+
+  & > input {
+    &:focus {
+      outline: none;
+      border: 2px solid rgb(252, 96, 96);
+    }
+  }
 }
 
 .buttons {
@@ -35,7 +42,7 @@
   gap: 0.3rem;
 }
 
-.icon{
+.icon {
   width: 0.7rem;
-  fill: white
+  fill: white;
 }
