@@ -50,6 +50,16 @@ function App() {
     }
   };
 
+  const handlerSearch = async (id) => {
+    if (id === "") {
+      getPokemons();
+    } else {
+      const response = await fetch(BASE_URL + id);
+      const jsonData = await response.json();
+      setPokemons([jsonData]);
+    }
+  };
+
   const create = () => {
     const newPokemon = {
       name: pokemonSelected.name,
@@ -94,7 +104,7 @@ function App() {
     <div className="App">
       <h3 className="title">Listado de Pokemon</h3>
       <header>
-        <SearchBar />
+        <SearchBar handlerSearch={handlerSearch} />
         <button onClick={() => handlerNew()}>
           <PlusIcon className="icon" /> Nuevo
         </button>
