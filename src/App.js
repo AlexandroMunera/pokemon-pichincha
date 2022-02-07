@@ -7,21 +7,6 @@ import { ReactComponent as PlusIcon } from "./images/plusIcon.svg";
 
 const BASE_URL = "https://pokemon-pichincha.herokuapp.com/pokemons/";
 
-// const pokemones = [
-//   {
-//     id: 430,
-//     name: "Charmander",
-//     image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
-//     type: "fire",
-//     hp: 99,
-//     attack: 100,
-//     defense: 7,
-//     idAuthor: 1,
-//     created_at: "2021-12-30T00:40:01.709Z",
-//     updated_at: "2022-01-13T01:00:13.341Z",
-//   },
-// ];
-
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [pokemons, setPokemons] = useState([]);

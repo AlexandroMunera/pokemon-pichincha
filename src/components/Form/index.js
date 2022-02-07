@@ -21,7 +21,7 @@ export const Form = ({
   };
 
   return (
-    <div className="container">
+    <div role="form" className="form">
       <h3>{pokemonSelected ? "Editar" : "Nuevo"} Pokemon</h3>
       <div className="details">
         <div className="data">
